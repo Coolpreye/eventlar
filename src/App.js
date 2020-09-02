@@ -1,10 +1,13 @@
 import React from 'react';
-
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import HomePage from './components/homepage/HomePage';
 
 function App() {
   return (
     <React.Fragment>
-      <h1>Welcome to our world</h1>
+      <Router>
+        <Route exact path="/" component={HomePage} />
+      </Router>
     </React.Fragment>
   );
 }
